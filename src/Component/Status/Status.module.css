@@ -1,0 +1,27 @@
+.s_container {
+  width: 550px;
+  margin-top: -10px;
+  margin-bottom: 40px;
+}
+
+.sc_status_diagram {
+  border-radius: 20px;
+  height: 15px;
+  background-color: #c5cdd2;
+  margin-bottom: 10px;
+}
+
+.sc_status {
+  font-size: 1.75rem;
+  font-family: sans-serif;
+  color: #c5cdd2;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sc_s_question > span,
+.sc_s_point > span {
+  font-weight: bold;
+}

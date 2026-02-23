@@ -1,0 +1,14 @@
+.t_container {
+  position: relative;
+}
+.t_container > button {
+  position: absolute;
+  left: 0;
+  font-size: 1.8rem;
+  cursor: not-allowed;
+  color: #ecf0f2;
+  border-radius: 30px;
+  padding: 7px 20px;
+  border: 2px solid #4d5759;
+  background-color: transparent;
+}

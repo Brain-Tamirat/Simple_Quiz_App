@@ -1,0 +1,26 @@
+.sp_container {
+  text-align: center;
+}
+
+.sp_container h1 {
+  font-size: 4.5rem;
+}
+
+.sp_container h2 {
+  font-size: 2.8em;
+  margin: 20px 0;
+}
+
+.sp_container button {
+  font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  color: #ecf0f2;
+  background-color: #3f474c;
+  cursor: pointer;
+}
+
+.sp_container button:hover {
+  background-color: #363d41;
+}
