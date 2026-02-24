@@ -50,7 +50,14 @@ function reducer(current, action) {
 
     case "next":
       if (current.number == current.total - 1) {
-        return initialState;
+        window.alert("Finsihed Your Question. Take it again?");
+        return {
+          ...initialState,
+          total: action["payload"].length,
+          point: action["payload"].reduce((p, c) => p + c.point, 0),
+          data: action.payload,
+          question: action.payload[0],
+        };
       }
 
       return {
@@ -63,7 +70,14 @@ function reducer(current, action) {
       };
 
     case "time_end":
-      return initialState;
+      window.alert("Time Is Done?");
+      return {
+        ...initialState,
+        total: action["payload"].length,
+        point: action["payload"].reduce((p, c) => p + c.point, 0),
+        data: action.payload,
+        question: action.payload[0],
+      };
 
     default:
       throw new Error("Something went Bloom!");
@@ -92,16 +106,28 @@ export default function Landing() {
     dispatch({ type: "choosed", payload: num });
   }
 
-  function handleNext() {
-    dispatch({ type: "next" });
+  async function handleNext() {
+    try {
+      const res = await fetch("http://localhost:8000/questions");
+      const data = await res.json();
+      dispatch({ type: "next", payload: data });
+    } catch (e) {
+      console.log(e.message);
+    }
   }
 
   function handleStart() {
     dispatch({ type: "start" });
   }
 
-  function handleTimeEnd() {
-    dispatch({ type: "time_end" });
+  async function handleTimeEnd() {
+    try {
+      const res = await fetch("http://localhost:8000/questions");
+      const data = await res.json();
+      dispatch({ type: "time_end", payload: data });
+    } catch (e) {
+      console.log(e.message);
+    }
   }
 
   return (

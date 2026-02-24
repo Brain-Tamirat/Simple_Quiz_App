@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import c from "./Timer.module.css";
 
 export default function Timer({ onTimeEnd }) {
-  const [time, setTime] = useState("00:30");
+  const [time, setTime] = useState("05:30");
   useEffect(() => {
-    let timer = 30;
+    let timer = 5 * 60 + 30;
     let countdown = setInterval(function () {
       let minutes = Math.floor(timer / 60);
       let seconds = timer % 60;
@@ -15,11 +15,11 @@ export default function Timer({ onTimeEnd }) {
 
       if (--timer < 0) {
         clearInterval(countdown);
-        setTime("00:30");
+        setTime("00:00");
         onTimeEnd();
       }
     }, 1000);
-  }, [onTimeEnd]);
+  }, []);
   return (
     <div className={c.t_container}>
       <button>{time}</button>
