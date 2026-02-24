@@ -23,6 +23,103 @@
       "options": ["FBJ", "Babel", "JSX", "ES2015"],
       "correct": 2,
       "point": 10
+    },
+    {
+      "question": "How does data flow naturally in React apps",
+      "options": [
+        "From parents to children",
+        "From children to parents",
+        "Both ways",
+        "The developer decides"
+      ],
+      "correct": 0,
+      "point": 10
+    },
+    {
+      "question": "Which method is used to update the state in a React component?",
+      "options": ["updateState", "setState", "changeState", "modifyState"],
+      "correct": 1,
+      "point": 10
+    },
+    {
+      "question": "What lifecycle method is called after the component has been mounted?",
+      "options": [
+        "componentWillMount",
+        "componentDidUpdate",
+        "componentDidMount",
+        "componentWillUnmount"
+      ],
+      "correct": 2,
+      "point": 10
+    },
+    {
+      "question": "Which hook lets you add state to functional components?",
+      "options": ["useEffect", "useState", "useContext", "useReducer"],
+      "correct": 1,
+      "point": 10
+    },
+    {
+      "question": "Which API prevents unnecessary re-renders of a functional component?",
+      "options": [
+        "shouldComponentUpdate",
+        "React.memo",
+        "PureComponent",
+        "useMemo"
+      ],
+      "correct": 1,
+      "point": 20
+    },
+    {
+      "question": "Which attribute is used to give each item in a list a stable identity?",
+      "options": ["id", "key", "uid", "name"],
+      "correct": 1,
+      "point": 10
+    },
+    {
+      "question": "Where do you run side-effectful code in a functional React component?",
+      "options": ["useEffect", "useState", "useRef", "useLayoutEffect"],
+      "correct": 0,
+      "point": 10
+    },
+    {
+      "question": "What does 'lifting state up' mean in React?",
+      "options": [
+        "Moving state to a common parent",
+        "Using Redux for all state",
+        "Persisting state to localStorage",
+        "Converting state to refs"
+      ],
+      "correct": 0,
+      "point": 20
+    },
+    {
+      "question": "Which tool is commonly used to transpile JSX into JavaScript?",
+      "options": ["Webpack", "Babel", "Rollup", "ESLint"],
+      "correct": 1,
+      "point": 20
+    },
+    {
+      "question": "How do you pass data from a parent component to a child component?",
+      "options": ["Events", "Props", "Context API", "Refs"],
+      "correct": 1,
+      "point": 10
+    },
+    {
+      "question": "Which hook lets you consume a React Context value in a functional component?",
+      "options": ["useContext", "useReducer", "useState", "useRef"],
+      "correct": 0,
+      "point": 20
+    },
+    {
+      "question": "What is the Virtual DOM in React?",
+      "options": [
+        "The real browser DOM",
+        "A lightweight JavaScript representation of the UI",
+        "A CSS framework",
+        "A server-side rendering tool"
+      ],
+      "correct": 1,
+      "point": 20
     }
   ]
 }

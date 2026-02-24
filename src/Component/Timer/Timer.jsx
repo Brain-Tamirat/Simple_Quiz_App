@@ -18,6 +18,10 @@ export default function Timer({ onTimeEnd }) {
         setTime("00:00");
         onTimeEnd();
       }
+
+      return function () {
+        clearInterval(countdown);
+      };
     }, 1000);
   }, []);
   return (
